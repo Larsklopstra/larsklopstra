@@ -6,11 +6,11 @@ function homestead
 	cd ~/Homestead
 	
 	if test $argv -z
-		gedit ./Homestead.yaml
+		vagrant up
 	else if test $argv[1] = 'r'
 		vagrant reload -p
 	else if test $argv[1] = 'edit'
-		vagrant up
+		gedit ./Homestead.yaml
 	else
 		vagrant $argv
 	end
